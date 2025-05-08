@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Источники информации и сервисы, нухный ссылки - быстрый доступ">
+	<title>Job</title>
+	<link rel="stylesheet" href="/css/root.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="tab__button-wrapper">
+			<button class="tab__button" data-show="show">список</button>
+			<button class="tab__button">поиск</button>
+		</div>
+		<div class="tab__container-wrapper">
+			<div class="tab__container" data-name="list-car-namber" data-show="show">
+				<details class="details" name="auto-number">
+					<summary class="details__summary"><span>0</span></summary>
+					<div class="details__content">
+						<p><i>1</i><span>007</span></p>
+						<p><i>2</i><span>034</span></p>
+						<p><i>1</i><span>007</span></p>
+						<p><i>2</i><span>034</span></p>
+						<p><i>1</i><span>007</span></p>
+						<p><i>2</i><span>034</span></p>
+						<p><i>1</i><span>007</span></p>
+						<p><i>2</i><span>034</span></p>
+						<p><i>1</i><span>007</span></p>
+						<p><i>2</i><span>034</span></p>
+						<p><i>1</i><span>007</span></p>
+						<p><i>2</i><span>034</span></p>
+					</div>
+					<p class="details__footer">всего - 12</p>
+				</details>
+				<details class="details" name="auto-number">
+					<summary class="details__summary"><span>1</span></summary>
+					<div class="details__content">101</div>
+				</details>
+			</div>
+			<div class="tab__container">
+				<div class="car-search">
+					<form action="car-search" class="car-search__form">
+						<p class="car-search__out-car-number" data-show="true-false"></p>
+						<label for="car-number" class="car-search__label">номер машины (цифры)</label>
+						<input type="number" name="car-number" id="car-number"class="car-search__input" min="1" max="999">
+						<button type="submit" class="car-search__submit">поиск</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/db.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
