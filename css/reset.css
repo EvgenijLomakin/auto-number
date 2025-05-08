@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-size: var(--fontsize);
+	font-family: sans-serif;
+}
+.w100 { width:100%; }
+.text-center { text-align: center; justify-content: center; }
+.p-h1, .p-h2, .p-h3 {
+	font-weight: 800;
+}
+.p-h1 { font-size: 1.7em; }
+.p-h2 { font-size: 1.5em; }
+.p-h3 { font-size: 1.3em; }

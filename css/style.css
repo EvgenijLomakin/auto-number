@@ -1,0 +1,133 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 98%;
+	margin-left: 1%;
+	padding: 0.2em;
+}
+.tab__button-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-around;
+	padding: 0.25em;
+	background-color: #111;
+	color: #fff;
+}
+.tab__button {
+	font-size: 1em;
+	border: none;
+	padding: 0.1em 0.5em;
+	color: var(--btn-color);
+	background-color: var(--btn-bg-color);
+}
+.tab__button:hover {
+	cursor: pointer;
+	background-color: var(--btn-bg-color-hover);
+}
+.tab__button[data-show="show"] {
+	background-color: var(--btn-bg-color-show);
+}
+.tab__button[data-show="show"]:hover {
+	cursor: default;
+	opacity: 0.5;
+}
+.tab__container-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.tab__container {
+	display: none;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.tab__container[data-show="show"] {display: flex;}
+.details {
+	width: 100%;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+	font-size: 1.2em;
+}
+.details__summary {
+	display: flex;
+	padding: 0 0.5em;
+	color: var(--btn-color);;
+	background-color: var(--btn-bg-color);
+}
+.details__summary:hover {
+	cursor: pointer;
+	background-color: var(--btn-bg-color-hover);
+}
+.details[open] .details__summary {
+	background-color: var(--btn-bg-color-show);
+}
+.details__summary span {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.details__content {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.details__content .details__content_p {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0.25em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	border-bottom: 1px solid;
+}
+.details__footer {
+	width: 100%;
+	text-align: right;
+	margin-right: 1em;
+}
+.car-search {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 750px;
+	margin: 0.5em auto;
+}
+.car-search__form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 730px;
+	margin: 0 auto;
+}
+.car-search__out-car-number {
+	width: 100%;
+	height: 1.3em;
+	font-size: 1.3em;
+	color: #fff;
+}
+.car-search__out-car-number[data-show="true"] {
+	background-color: green;
+}
+.car-search__out-car-number[data-show="false"] {
+	background-color: red;
+}
+.car-search__label {
+	width: 100%;
+}
+.car-search__input {
+	width: 100%;
+	font-size: 1.5em;
+}
+.car-search__submit {
+	margin: 1em 0.5em;
+	font-size: 1.5em;
+	border: none;
+	padding: 0 1em;
+	color: var(--btn-color);
+	background-color: var(--btn-bg-color);
+}
+.car-search__submit:hover {
+	cursor: pointer;
+	background-color: var(--btn-bg-color-hover);
+}
