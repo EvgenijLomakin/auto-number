@@ -93,6 +93,19 @@
 	max-width: 750px;
 	margin: 0.5em auto;
 }
+.car-search__out-text {
+	display: flex;
+	width: 100%;
+	height: 1.3em;
+	font-size: 1.3em;
+	color: #fff;
+}
+.car-search__out-text[data-show="true"] {
+	background-color: green;
+}
+.car-search__out-text[data-show="false"] {
+	background-color: red;
+}
 .car-search__form {
 	display: flex;
 	flex-wrap: wrap;
