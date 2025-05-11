@@ -1,4 +1,3 @@
-console.log('job main.js')
 let tab__button_wrapper = document.querySelector('.tab__button-wrapper');
 let tab_btns = tab__button_wrapper.querySelectorAll('.tab__button');
 let tab_btns_len = tab_btns.length;
@@ -12,6 +11,9 @@ let car_search__out_car_number = car_search__form.querySelector('.car-search__ou
 let car_search__input = car_search__form.querySelector('.car-search__input');
 let car_search__input_value;
 let empty_number = false;
+let input_car_interactive = document.querySelector('#search-car-number');
+let input_car_interactive_number;
+let car_search_out_text = document.querySelector('.car-search__out-text');
 
 list_car_namber.innerHTML = '';
 
@@ -45,6 +47,47 @@ for ( let i = 0; i < car_nambers.length; i++ )
 	details__content.innerHTML += `<p class="details__footer">всего - ${car_nambers[i].length}</p>`;
 }
 list_car_namber.innerHTML += `<p>всего машин: ${count_all_cars}</p>`
+
+// интерактивный
+input_car_interactive.addEventListener('input', (e) => {
+	input_car_interactive_number = input_car_interactive.value * 1;
+	car_search_out_text.dataset.show = '';
+	if ( (input_car_interactive.value.length >= 1) && input_car_interactive.value.length <= 3 )
+	{
+		car_search_out_text.dataset.show = '';
+		car_search_out_text.innerHTML = '';
+		if ( ( input_car_interactive_number < 1 ) || ( input_car_interactive_number > 999 )  )
+		{
+			car_search_out_text.innerHTML = '1 ... 999';
+			car_search_out_text.dataset.show = 'false';
+			input_car_interactive.value = '';
+		}
+		// search
+		for ( let i = 0; i < car_nambers.length; i++ )
+		{
+			empty_number = car_nambers[i].includes( input_car_interactive_number );
+			if ( empty_number )
+			{
+				car_search_out_text.innerHTML = input_car_interactive.value;
+				break;
+			}
+		}
+		if ( empty_number )
+		{
+			car_search_out_text.dataset.show = 'true';
+		}
+		else
+		{
+			car_search_out_text.dataset.show = 'false';
+		}
+	}
+	if ( input_car_interactive.value.length > 3 )
+	{
+		car_search_out_text.innerHTML = '1 ... 999';
+		car_search_out_text.dataset.show = 'false';
+		input_car_interactive.value = '';
+	}
+});
 
 car_search__form.addEventListener('submit', (e) => {
 	e.preventDefault();
