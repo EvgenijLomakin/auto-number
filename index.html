@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Источники информации и сервисы, нухный ссылки - быстрый доступ">
-	<title>Job</title>
+	<title>Autu number</title>
 	<link rel="stylesheet" href="./css/root.css">
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
@@ -12,51 +11,53 @@
 <body>
 	<div class="container">
 		<div class="tab__button-wrapper">
-			<button class="tab__button" data-show="show">список</button>
-			<button class="tab__button">по номеру</button>
-			<button class="tab__button">поиск</button>
+			<button class="tab__button" data-show="show">Все</button>
+			<button class="tab__button">Постоянные</button>
+			<button class="tab__button">Парковка</button>
+			<button class="tab__button">Поиск</button>
 		</div>
 		<div class="tab__container-wrapper">
-			<div class="tab__container" data-name="list-car-namber" data-show="show">
-				<details class="details" name="auto-number">
-					<summary class="details__summary"><span>0</span></summary>
-					<div class="details__content">
-						<p><i>1</i><span>007</span></p>
-						<p><i>2</i><span>034</span></p>
-						<p><i>1</i><span>007</span></p>
-						<p><i>2</i><span>034</span></p>
-						<p><i>1</i><span>007</span></p>
-						<p><i>2</i><span>034</span></p>
-						<p><i>1</i><span>007</span></p>
-						<p><i>2</i><span>034</span></p>
-						<p><i>1</i><span>007</span></p>
-						<p><i>2</i><span>034</span></p>
-						<p><i>1</i><span>007</span></p>
-						<p><i>2</i><span>034</span></p>
+			<div class="tab__container" data-show="show" data-name="all">all</div>
+			<div class="tab__container" data-name="car_nambers">Постоянные</div>
+			<div class="tab__container" data-name="parking_by_time">Парковка</div>
+			<div class="tab__container" data-name="search">
+				<form class="form form-table-search">
+					<div class="form__item">
+						<label class="form__label">номер машины</label>
+						<input class="form__input-text" name="input-search-car" type="text">
 					</div>
-					<p class="details__footer">всего - 12</p>
-				</details>
-				<details class="details" name="auto-number">
-					<summary class="details__summary"><span>1</span></summary>
-					<div class="details__content">101</div>
-				</details>
-			</div>
-			<div class="tab__container">
-				<p class="car-search__out-text">e</p>
-				<label for="search-car-number">номер машины (цифры). интерактивный поиск</label>
-				<input type="number" name="search-car-number" id="search-car-number"class="car-search__input" min="1" max="999" placeholder="1 .. 999">
-			</div>
-			<div class="tab__container">
-				<div class="car-search">
-					<form action="car-search" class="car-search__form">
-						<p class="car-search__out-car-number" data-show="true-false"></p>
-						<label for="car-number" class="car-search__label">номер машины (цифры)</label>
-						<input type="number" name="car-number" id="car-number"class="car-search__input" min="1" max="999">
-						<button type="submit" class="car-search__submit">поиск</button>
-					</form>
+					<div class="form__item form__item_space-around">
+						<button type="submit" class="form__btn">Найти</button>
+						<button type="reset" class="form__btn">Сброс</button>
+						
+					</div>
+				</form>
+				<div class="table__wrapper">
+					<table class="table">
+						<thead>
+						    <tr>
+						      <th scope="col">номер</th>
+						      <th scope="col">дополнение</th>
+						    </tr>
+						</thead>
+
+						<tbody class="table-body-search">
+							 <tr>
+							      <td>127</td>
+							      <td>-</td>
+							      <td>-</td>
+							 </tr>
+							 <tr>
+							      <td>127</td>
+							      <td>-</td>
+							      <td>-</td>
+							 </tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
+		
 	</div>
 	<script src="./js/db.js"></script>
 	<script src="./js/main.js"></script>
